@@ -35,5 +35,16 @@ public class Main {
         cc1.mostrarSaldo();
         cc1.retirar(200.0); // saldo quedaría en -300, excede el límite -> rechazado
         cc1.mostrarSaldo();
+        
+        System.out.println("\n===== 3. PRODUCTO Y PRODUCTO PERECEDERO =====");
+
+        Producto prod1 = new Producto("Cuaderno", 15.0);
+        prod1.mostrar();
+
+        ProductoPerecedero leche = new ProductoPerecedero("Leche", 12.5, LocalDate.of(2026, 7, 1)); // fecha pasada
+        ProductoPerecedero yogurt = new ProductoPerecedero("Yogurt", 8.0, LocalDate.of(2026, 12, 31)); // fecha futura
+
+        leche.mostrar();
+        yogurt.mostrar();
     }
 }
