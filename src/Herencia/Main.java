@@ -57,5 +57,13 @@ public class Main {
         Bus bus1 = new Bus(40, "Antigua Guatemala - Ciudad de Guatemala");
         System.out.println(bus1.descripcion());
         
+        System.out.println("\n===== 5. EMPLEADO Y GERENTE =====");
+
+        Empleado empleado1 = new Empleado("Javier Fernández", 4500.0);
+        empleado1.mostrar();
+
+        Gerente gerente1 = new Gerente("Ana Torres", 6000.0, 1500.0);
+        gerente1.mostrar(); // usa el calcularSalario() de Gerente automáticamente
+        
     }
 }
