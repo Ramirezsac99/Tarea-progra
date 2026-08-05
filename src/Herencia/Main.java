@@ -1,4 +1,5 @@
-package Herencia;
+package Herencia; 
+import java.time.LocalDate;
 
 public class Main {
     public static void main(String[] args) {
@@ -46,5 +47,15 @@ public class Main {
 
         leche.mostrar();
         yogurt.mostrar();
+        
+        
+        System.out.println("\n===== 4. TRANSPORTE Y BUS =====");
+
+        Transporte transporte1 = new Transporte(4);
+        System.out.println(transporte1.descripcion());
+
+        Bus bus1 = new Bus(40, "Antigua Guatemala - Ciudad de Guatemala");
+        System.out.println(bus1.descripcion());
+        
     }
 }
