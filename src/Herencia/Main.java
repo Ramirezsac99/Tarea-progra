@@ -101,6 +101,14 @@ public class Main {
         System.out.println("--- Recorriendo arreglo de figuras ---");
         for (Figura f : figuras) {
             System.out.println("Área: " + f.calcularArea());
+            
+            System.out.println("\n===== 9. LIBRO Y LIBRO DIGITAL =====");
+
+            Libro libro1 = new Libro("Cien años de soledad", "Gabriel García Márquez");
+            System.out.println(libro1.mostrarInfo());
+
+            LibroDigital libroDigital1 = new LibroDigital("El Principito", "Antoine de Saint-Exupéry", 2.5);
+            System.out.println(libroDigital1.mostrarInfo());
         }
         
     }
