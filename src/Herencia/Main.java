@@ -65,5 +65,17 @@ public class Main {
         Gerente gerente1 = new Gerente("Ana Torres", 6000.0, 1500.0);
         gerente1.mostrar(); // usa el calcularSalario() de Gerente automáticamente
         
+        System.out.println("\n===== 6. ANIMAL Y PERRO =====");
+
+        Animal animal1 = new Animal("Animal genérico");
+        animal1.hacerSonido();
+
+        Perro perro1 = new Perro("Rex");
+        perro1.hacerSonido();
+
+        // Ejemplo de polimorfismo: una referencia tipo Animal apuntando a un Perro
+        Animal animal2 = new Perro("Firulais");
+        animal2.hacerSonido(); // ejecuta el método de Perro, no el de Animal
+        
     }
 }
