@@ -85,5 +85,23 @@ public class Main {
         Moto moto1 = new Moto("Yamaha", 150.0, 250);
         System.out.println(moto1.mostrarInfo());
         
+        System.out.println("\n===== 8. FIGURA, RECTANGULO Y CIRCULO =====");
+
+        Figura figuraGenerica = new Figura();
+        System.out.println("Área figura genérica: " + figuraGenerica.calcularArea());
+
+        Rectangulo rect1 = new Rectangulo(5, 10);
+        System.out.println("Área rectángulo: " + rect1.calcularArea());
+
+        Circulo circulo1 = new Circulo(7);
+        System.out.println("Área círculo: " + circulo1.calcularArea());
+
+        // Polimorfismo: un arreglo de Figura puede contener distintas subclases
+        Figura[] figuras = { rect1, circulo1 };
+        System.out.println("--- Recorriendo arreglo de figuras ---");
+        for (Figura f : figuras) {
+            System.out.println("Área: " + f.calcularArea());
+        }
+        
     }
 }
