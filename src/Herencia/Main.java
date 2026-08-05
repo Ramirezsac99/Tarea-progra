@@ -77,5 +77,13 @@ public class Main {
         Animal animal2 = new Perro("Firulais");
         animal2.hacerSonido(); // ejecuta el método de Perro, no el de Animal
         
+        System.out.println("\n===== 7. VEHICULO Y MOTO =====");
+
+        Vehiculo vehiculo1 = new Vehiculo("Toyota", 180.0);
+        System.out.println(vehiculo1.mostrarInfo());
+
+        Moto moto1 = new Moto("Yamaha", 150.0, 250);
+        System.out.println(moto1.mostrarInfo());
+        
     }
 }
