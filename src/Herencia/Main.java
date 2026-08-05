@@ -109,6 +109,20 @@ public class Main {
 
             LibroDigital libroDigital1 = new LibroDigital("El Principito", "Antoine de Saint-Exupéry", 2.5);
             System.out.println(libroDigital1.mostrarInfo());
+            
+            
+            System.out.println("\n===== 10. SISTEMA DE FACTURACIÓN (DESAFIANTE) =====");
+
+            Cliente cliente1 = new Cliente("Javier Ramírez", "1234567-8");
+
+            Factura facturaGenerica = new Factura("F-1000", cliente1, -50); // total inválido, se corrige a 0
+            facturaGenerica.mostrarFactura();
+
+            FacturaContado fc1 = new FacturaContado("F-1001", cliente1, 1000.0, 10); // 10% descuento
+            fc1.mostrarFactura();
+
+            FacturaCredito fcr1 = new FacturaCredito("F-1002", cliente1, 1000.0, 5, 3); // 5% recargo, 3 cuotas
+            fcr1.mostrarFactura();
         }
         
     }
