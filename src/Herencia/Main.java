@@ -22,5 +22,18 @@ public class Main {
         docente1.mostrar();
         System.out.println("---");
         estudiante1.mostrar();
+        
+        
+        System.out.println("\n===== 2. CUENTA Y CUENTA CORRIENTE =====");
+
+        Cuenta cuenta1 = new Cuenta(500.0);
+        cuenta1.retirar(600.0); // rechazado, no permite sobregiro
+
+        CuentaCorriente cc1 = new CuentaCorriente(500.0, 200.0); // saldo 500, sobregiro hasta -200
+        cc1.mostrarSaldo();
+        cc1.retirar(600.0); // saldo queda en -100, dentro del límite de -200
+        cc1.mostrarSaldo();
+        cc1.retirar(200.0); // saldo quedaría en -300, excede el límite -> rechazado
+        cc1.mostrarSaldo();
     }
 }
